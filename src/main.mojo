@@ -1,10 +1,7 @@
 # MojoADB: Main Module
 
-# Import core modules
 from core.client import ADBClient
 from core.errors import ADBError
-
-# Import feature modules
 from device.management import (
     list_devices, get_serialno, reboot, emu_kill, kill_server, start_server,
     get_state, wait_for_device, root, unroot, remount, sideload
@@ -22,7 +19,7 @@ from device.batch import BatchOperations
 from device.tracker import DeviceTracker
 from device.performance import PerformanceMonitor
 
-# Main CLI
+
 fn main():
     var args = sys.argv()
     if len(args) < 2:
@@ -34,7 +31,7 @@ fn main():
     var verbose = False
     var i = 1
 
-    # Parse flags
+  
     while i < len(args) and args[i].startswith("-"):
         if args[i] == "-s" and i + 1 < len(args):
             serial = args[i + 1]
