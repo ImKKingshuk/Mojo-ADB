@@ -1,6 +1,6 @@
 # MojoADB: Logging Module
 
-from client.adb_client import ADBClient
+from core.client import ADBClient
 
 # Logging and debugging functions
 fn logcat(client: ADBClient, filter: String = ""):
